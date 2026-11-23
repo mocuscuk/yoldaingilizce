@@ -1,0 +1,782 @@
+[
+ {
+  "w": "time",
+  "tr": "zaman",
+  "ex": "I don't have much time today.",
+  "lv": "A1"
+ },
+ {
+  "w": "people",
+  "tr": "insanlar",
+  "ex": "Many people live in this city.",
+  "lv": "A1"
+ },
+ {
+  "w": "year",
+  "tr": "yıl",
+  "ex": "I started this job last year.",
+  "lv": "A1"
+ },
+ {
+  "w": "day",
+  "tr": "gün",
+  "ex": "Have a nice day!",
+  "lv": "A1"
+ },
+ {
+  "w": "way",
+  "tr": "yol, yöntem",
+  "ex": "This is the best way to learn.",
+  "lv": "A1"
+ },
+ {
+  "w": "man",
+  "tr": "adam",
+  "ex": "The man is waiting at the door.",
+  "lv": "A1"
+ },
+ {
+  "w": "thing",
+  "tr": "şey",
+  "ex": "I need to buy a few things.",
+  "lv": "A1"
+ },
+ {
+  "w": "woman",
+  "tr": "kadın",
+  "ex": "That woman is my teacher.",
+  "lv": "A1"
+ },
+ {
+  "w": "life",
+  "tr": "hayat",
+  "ex": "Life is short.",
+  "lv": "A1"
+ },
+ {
+  "w": "child",
+  "tr": "çocuk",
+  "ex": "The child is playing in the garden.",
+  "lv": "A1"
+ },
+ {
+  "w": "world",
+  "tr": "dünya",
+  "ex": "She wants to travel around the world.",
+  "lv": "A1"
+ },
+ {
+  "w": "school",
+  "tr": "okul",
+  "ex": "My son goes to school by bus.",
+  "lv": "A1"
+ },
+ {
+  "w": "family",
+  "tr": "aile",
+  "ex": "I have a big family.",
+  "lv": "A1"
+ },
+ {
+  "w": "work",
+  "tr": "iş, çalışmak",
+  "ex": "I go to work at eight.",
+  "lv": "A1"
+ },
+ {
+  "w": "house",
+  "tr": "ev",
+  "ex": "Their house is very old.",
+  "lv": "A1"
+ },
+ {
+  "w": "friend",
+  "tr": "arkadaş",
+  "ex": "He is my best friend.",
+  "lv": "A1"
+ },
+ {
+  "w": "car",
+  "tr": "araba",
+  "ex": "My car is in the garage.",
+  "lv": "A1"
+ },
+ {
+  "w": "water",
+  "tr": "su",
+  "ex": "Can I have a glass of water?",
+  "lv": "A1"
+ },
+ {
+  "w": "money",
+  "tr": "para",
+  "ex": "I don't have any money with me.",
+  "lv": "A1"
+ },
+ {
+  "w": "food",
+  "tr": "yemek",
+  "ex": "The food here is very good.",
+  "lv": "A1"
+ },
+ {
+  "w": "go",
+  "tr": "gitmek",
+  "ex": "Let's go home.",
+  "lv": "A1"
+ },
+ {
+  "w": "come",
+  "tr": "gelmek",
+  "ex": "Can you come to my party?",
+  "lv": "A1"
+ },
+ {
+  "w": "make",
+  "tr": "yapmak",
+  "ex": "I make breakfast every morning.",
+  "lv": "A1"
+ },
+ {
+  "w": "take",
+  "tr": "almak",
+  "ex": "Take your umbrella, it's raining.",
+  "lv": "A1"
+ },
+ {
+  "w": "know",
+  "tr": "bilmek",
+  "ex": "I don't know his name.",
+  "lv": "A1"
+ },
+ {
+  "w": "see",
+  "tr": "görmek",
+  "ex": "I can see the sea from here.",
+  "lv": "A1"
+ },
+ {
+  "w": "want",
+  "tr": "istemek",
+  "ex": "I want a cup of coffee.",
+  "lv": "A1"
+ },
+ {
+  "w": "think",
+  "tr": "düşünmek",
+  "ex": "I think it's a good idea.",
+  "lv": "A1"
+ },
+ {
+  "w": "give",
+  "tr": "vermek",
+  "ex": "Give me the keys, please.",
+  "lv": "A1"
+ },
+ {
+  "w": "say",
+  "tr": "söylemek",
+  "ex": "What did you say?",
+  "lv": "A1"
+ },
+ {
+  "w": "good",
+  "tr": "iyi",
+  "ex": "This is a good book.",
+  "lv": "A1"
+ },
+ {
+  "w": "new",
+  "tr": "yeni",
+  "ex": "I bought a new phone.",
+  "lv": "A1"
+ },
+ {
+  "w": "big",
+  "tr": "büyük",
+  "ex": "They live in a big house.",
+  "lv": "A1"
+ },
+ {
+  "w": "small",
+  "tr": "küçük",
+  "ex": "It's a small town.",
+  "lv": "A1"
+ },
+ {
+  "w": "old",
+  "tr": "eski, yaşlı",
+  "ex": "My grandfather is very old.",
+  "lv": "A1"
+ },
+ {
+  "w": "always",
+  "tr": "her zaman",
+  "ex": "I always drink tea in the morning.",
+  "lv": "A1"
+ },
+ {
+  "w": "never",
+  "tr": "asla, hiç",
+  "ex": "I never eat meat.",
+  "lv": "A1"
+ },
+ {
+  "w": "today",
+  "tr": "bugün",
+  "ex": "What are you doing today?",
+  "lv": "A1"
+ },
+ {
+  "w": "tomorrow",
+  "tr": "yarın",
+  "ex": "See you tomorrow.",
+  "lv": "A1"
+ },
+ {
+  "w": "morning",
+  "tr": "sabah",
+  "ex": "I run every morning.",
+  "lv": "A1"
+ },
+ {
+  "w": "already",
+  "tr": "zaten, çoktan",
+  "ex": "I have already finished my work.",
+  "lv": "A2"
+ },
+ {
+  "w": "almost",
+  "tr": "neredeyse",
+  "ex": "It's almost five o'clock.",
+  "lv": "A2"
+ },
+ {
+  "w": "borrow",
+  "tr": "ödünç almak",
+  "ex": "Can I borrow your pen?",
+  "lv": "A2"
+ },
+ {
+  "w": "careful",
+  "tr": "dikkatli",
+  "ex": "Be careful on the road.",
+  "lv": "A2"
+ },
+ {
+  "w": "decide",
+  "tr": "karar vermek",
+  "ex": "We decided to stay at home.",
+  "lv": "A2"
+ },
+ {
+  "w": "enough",
+  "tr": "yeterli",
+  "ex": "We don't have enough chairs.",
+  "lv": "A2"
+ },
+ {
+  "w": "explain",
+  "tr": "açıklamak",
+  "ex": "Can you explain this word?",
+  "lv": "A2"
+ },
+ {
+  "w": "forget",
+  "tr": "unutmak",
+  "ex": "Don't forget your keys.",
+  "lv": "A2"
+ },
+ {
+  "w": "hope",
+  "tr": "ummak",
+  "ex": "I hope you feel better soon.",
+  "lv": "A2"
+ },
+ {
+  "w": "journey",
+  "tr": "yolculuk",
+  "ex": "The journey takes two hours.",
+  "lv": "A2"
+ },
+ {
+  "w": "late",
+  "tr": "geç",
+  "ex": "Sorry, I'm late.",
+  "lv": "A2"
+ },
+ {
+  "w": "lose",
+  "tr": "kaybetmek",
+  "ex": "I often lose my glasses.",
+  "lv": "A2"
+ },
+ {
+  "w": "meet",
+  "tr": "buluşmak, tanışmak",
+  "ex": "Nice to meet you.",
+  "lv": "A2"
+ },
+ {
+  "w": "plan",
+  "tr": "plan",
+  "ex": "What are your plans for the weekend?",
+  "lv": "A2"
+ },
+ {
+  "w": "quiet",
+  "tr": "sessiz",
+  "ex": "The library is very quiet.",
+  "lv": "A2"
+ },
+ {
+  "w": "remember",
+  "tr": "hatırlamak",
+  "ex": "I can't remember her name.",
+  "lv": "A2"
+ },
+ {
+  "w": "send",
+  "tr": "göndermek",
+  "ex": "I will send you an email.",
+  "lv": "A2"
+ },
+ {
+  "w": "traffic",
+  "tr": "trafik",
+  "ex": "There is a lot of traffic today.",
+  "lv": "A2"
+ },
+ {
+  "w": "try",
+  "tr": "denemek",
+  "ex": "Try this cake, it's delicious.",
+  "lv": "A2"
+ },
+ {
+  "w": "wait",
+  "tr": "beklemek",
+  "ex": "Please wait here.",
+  "lv": "A2"
+ },
+ {
+  "w": "weather",
+  "tr": "hava durumu",
+  "ex": "The weather is nice today.",
+  "lv": "A2"
+ },
+ {
+  "w": "while",
+  "tr": "iken, süre",
+  "ex": "I listen to music while I drive.",
+  "lv": "A2"
+ },
+ {
+  "w": "worry",
+  "tr": "endişelenmek",
+  "ex": "Don't worry, it's fine.",
+  "lv": "A2"
+ },
+ {
+  "w": "arrive",
+  "tr": "varmak",
+  "ex": "We arrived at the office at nine.",
+  "lv": "A2"
+ },
+ {
+  "w": "cheap",
+  "tr": "ucuz",
+  "ex": "This shirt was really cheap.",
+  "lv": "A2"
+ },
+ {
+  "w": "expensive",
+  "tr": "pahalı",
+  "ex": "The hotel is too expensive.",
+  "lv": "A2"
+ },
+ {
+  "w": "healthy",
+  "tr": "sağlıklı",
+  "ex": "I try to eat healthy food.",
+  "lv": "A2"
+ },
+ {
+  "w": "interesting",
+  "tr": "ilginç",
+  "ex": "That's an interesting idea.",
+  "lv": "A2"
+ },
+ {
+  "w": "problem",
+  "tr": "sorun",
+  "ex": "There's a problem with my car.",
+  "lv": "A2"
+ },
+ {
+  "w": "answer",
+  "tr": "cevap",
+  "ex": "I don't know the answer.",
+  "lv": "A2"
+ },
+ {
+  "w": "achieve",
+  "tr": "başarmak",
+  "ex": "She achieved all her goals this year.",
+  "lv": "B1"
+ },
+ {
+  "w": "advice",
+  "tr": "tavsiye",
+  "ex": "Can you give me some advice?",
+  "lv": "B1"
+ },
+ {
+  "w": "afford",
+  "tr": "gücü yetmek",
+  "ex": "We can't afford a new car.",
+  "lv": "B1"
+ },
+ {
+  "w": "attitude",
+  "tr": "tutum",
+  "ex": "He has a positive attitude.",
+  "lv": "B1"
+ },
+ {
+  "w": "avoid",
+  "tr": "kaçınmak",
+  "ex": "Try to avoid the highway at rush hour.",
+  "lv": "B1"
+ },
+ {
+  "w": "complain",
+  "tr": "şikayet etmek",
+  "ex": "He always complains about his job.",
+  "lv": "B1"
+ },
+ {
+  "w": "confident",
+  "tr": "kendinden emin",
+  "ex": "She feels confident about the exam.",
+  "lv": "B1"
+ },
+ {
+  "w": "deal with",
+  "tr": "ilgilenmek, başa çıkmak",
+  "ex": "I have to deal with a lot of emails.",
+  "lv": "B1"
+ },
+ {
+  "w": "improve",
+  "tr": "geliştirmek",
+  "ex": "I want to improve my English.",
+  "lv": "B1"
+ },
+ {
+  "w": "increase",
+  "tr": "artmak, artırmak",
+  "ex": "Prices increased last month.",
+  "lv": "B1"
+ },
+ {
+  "w": "manage",
+  "tr": "yönetmek, başarmak",
+  "ex": "I managed to finish on time.",
+  "lv": "B1"
+ },
+ {
+  "w": "opportunity",
+  "tr": "fırsat",
+  "ex": "This job is a great opportunity.",
+  "lv": "B1"
+ },
+ {
+  "w": "prefer",
+  "tr": "tercih etmek",
+  "ex": "I prefer tea to coffee.",
+  "lv": "B1"
+ },
+ {
+  "w": "reduce",
+  "tr": "azaltmak",
+  "ex": "We need to reduce costs.",
+  "lv": "B1"
+ },
+ {
+  "w": "rely on",
+  "tr": "güvenmek, bel bağlamak",
+  "ex": "You can rely on me.",
+  "lv": "B1"
+ },
+ {
+  "w": "suggest",
+  "tr": "önermek",
+  "ex": "I suggest we leave early.",
+  "lv": "B1"
+ },
+ {
+  "w": "support",
+  "tr": "desteklemek",
+  "ex": "My family always supports me.",
+  "lv": "B1"
+ },
+ {
+  "w": "include",
+  "tr": "içermek",
+  "ex": "The price includes breakfast.",
+  "lv": "B1"
+ },
+ {
+  "w": "deserve",
+  "tr": "hak etmek",
+  "ex": "You deserve a holiday.",
+  "lv": "B1"
+ },
+ {
+  "w": "however",
+  "tr": "ancak, bununla birlikte",
+  "ex": "It was expensive. However, it was worth it.",
+  "lv": "B1"
+ },
+ {
+  "w": "approach",
+  "tr": "yaklaşım",
+  "ex": "We need a new approach to this problem.",
+  "lv": "B2"
+ },
+ {
+  "w": "assume",
+  "tr": "varsaymak",
+  "ex": "I assume you've heard the news.",
+  "lv": "B2"
+ },
+ {
+  "w": "consequence",
+  "tr": "sonuç",
+  "ex": "Every decision has consequences.",
+  "lv": "B2"
+ },
+ {
+  "w": "contribute",
+  "tr": "katkıda bulunmak",
+  "ex": "Everyone contributed to the project.",
+  "lv": "B2"
+ },
+ {
+  "w": "despite",
+  "tr": "-e rağmen",
+  "ex": "Despite the rain, we went out.",
+  "lv": "B2"
+ },
+ {
+  "w": "efficient",
+  "tr": "verimli",
+  "ex": "This is a more efficient way to work.",
+  "lv": "B2"
+ },
+ {
+  "w": "emphasize",
+  "tr": "vurgulamak",
+  "ex": "He emphasized the importance of safety.",
+  "lv": "B2"
+ },
+ {
+  "w": "evidence",
+  "tr": "kanıt",
+  "ex": "There is no evidence for that claim.",
+  "lv": "B2"
+ },
+ {
+  "w": "inevitable",
+  "tr": "kaçınılmaz",
+  "ex": "Some delays are inevitable.",
+  "lv": "B2"
+ },
+ {
+  "w": "maintain",
+  "tr": "sürdürmek, korumak",
+  "ex": "It's hard to maintain a healthy diet.",
+  "lv": "B2"
+ },
+ {
+  "w": "negotiate",
+  "tr": "müzakere etmek",
+  "ex": "We negotiated a better price.",
+  "lv": "B2"
+ },
+ {
+  "w": "obvious",
+  "tr": "apaçık",
+  "ex": "The answer is obvious.",
+  "lv": "B2"
+ },
+ {
+  "w": "overcome",
+  "tr": "üstesinden gelmek",
+  "ex": "She overcame many difficulties.",
+  "lv": "B2"
+ },
+ {
+  "w": "reluctant",
+  "tr": "isteksiz",
+  "ex": "He was reluctant to help.",
+  "lv": "B2"
+ },
+ {
+  "w": "significant",
+  "tr": "önemli, kayda değer",
+  "ex": "There was a significant change in sales.",
+  "lv": "B2"
+ },
+ {
+  "w": "tend to",
+  "tr": "eğiliminde olmak",
+  "ex": "I tend to wake up early.",
+  "lv": "B2"
+ },
+ {
+  "w": "thorough",
+  "tr": "titiz, kapsamlı",
+  "ex": "The doctor did a thorough check.",
+  "lv": "B2"
+ },
+ {
+  "w": "whereas",
+  "tr": "oysa",
+  "ex": "I like coffee, whereas my wife prefers tea.",
+  "lv": "B2"
+ },
+ {
+  "w": "widespread",
+  "tr": "yaygın",
+  "ex": "The problem is widespread.",
+  "lv": "B2"
+ },
+ {
+  "w": "outcome",
+  "tr": "sonuç",
+  "ex": "We are happy with the outcome.",
+  "lv": "B2"
+ },
+ {
+  "w": "albeit",
+  "tr": "-se de, gerçi",
+  "ex": "It worked, albeit slowly.",
+  "lv": "C1"
+ },
+ {
+  "w": "ambiguous",
+  "tr": "belirsiz, iki anlamlı",
+  "ex": "His answer was ambiguous.",
+  "lv": "C1"
+ },
+ {
+  "w": "compelling",
+  "tr": "ikna edici",
+  "ex": "She made a compelling argument.",
+  "lv": "C1"
+ },
+ {
+  "w": "comprehensive",
+  "tr": "kapsamlı",
+  "ex": "We need a comprehensive plan.",
+  "lv": "C1"
+ },
+ {
+  "w": "discrepancy",
+  "tr": "tutarsızlık",
+  "ex": "There is a discrepancy in the figures.",
+  "lv": "C1"
+ },
+ {
+  "w": "elaborate",
+  "tr": "ayrıntılı anlatmak",
+  "ex": "Could you elaborate on that?",
+  "lv": "C1"
+ },
+ {
+  "w": "feasible",
+  "tr": "uygulanabilir",
+  "ex": "Is the plan feasible?",
+  "lv": "C1"
+ },
+ {
+  "w": "hinder",
+  "tr": "engellemek",
+  "ex": "Bad weather hindered the work.",
+  "lv": "C1"
+ },
+ {
+  "w": "implicit",
+  "tr": "örtük, üstü kapalı",
+  "ex": "There was an implicit agreement.",
+  "lv": "C1"
+ },
+ {
+  "w": "mitigate",
+  "tr": "hafifletmek",
+  "ex": "We must mitigate the risks.",
+  "lv": "C1"
+ },
+ {
+  "w": "nuance",
+  "tr": "ince ayrım",
+  "ex": "He understands the nuances of the language.",
+  "lv": "C1"
+ },
+ {
+  "w": "plausible",
+  "tr": "akla yatkın",
+  "ex": "That's a plausible explanation.",
+  "lv": "C1"
+ },
+ {
+  "w": "prevalent",
+  "tr": "yaygın",
+  "ex": "This view is prevalent among young people.",
+  "lv": "C1"
+ },
+ {
+  "w": "scrutiny",
+  "tr": "dikkatli inceleme",
+  "ex": "The plan came under scrutiny.",
+  "lv": "C1"
+ },
+ {
+  "w": "subtle",
+  "tr": "ince, belli belirsiz",
+  "ex": "There is a subtle difference.",
+  "lv": "C1"
+ },
+ {
+  "w": "undermine",
+  "tr": "baltalamak",
+  "ex": "His comments undermined her confidence.",
+  "lv": "C1"
+ },
+ {
+  "w": "versatile",
+  "tr": "çok yönlü",
+  "ex": "She is a versatile actress.",
+  "lv": "C1"
+ },
+ {
+  "w": "whereby",
+  "tr": "vasıtasıyla",
+  "ex": "A system whereby workers share profits.",
+  "lv": "C1"
+ },
+ {
+  "w": "notwithstanding",
+  "tr": "-e rağmen",
+  "ex": "Notwithstanding the cost, we went ahead.",
+  "lv": "C1"
+ },
+ {
+  "w": "inherent",
+  "tr": "doğasında olan",
+  "ex": "There are risks inherent in any business.",
+  "lv": "C1"
+ }
+]

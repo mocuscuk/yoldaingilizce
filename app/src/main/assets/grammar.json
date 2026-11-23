@@ -1,0 +1,1056 @@
+{
+ "topics": [
+  {
+   "id": "be_present",
+   "title": "The verb 'to be' (am, is, are)",
+   "tr": "To be fiili: am, is, are",
+   "lv": "A1",
+   "tip": "I ile am, he she it ile is, we you they ile are kullanılır."
+  },
+  {
+   "id": "present_simple",
+   "title": "Present simple",
+   "tr": "Geniş zaman",
+   "lv": "A1",
+   "tip": "He, she, it ile fiile -s takısı gelir: he works."
+  },
+  {
+   "id": "do_does",
+   "title": "Questions and negatives with do / does",
+   "tr": "Do ve does ile soru ve olumsuz",
+   "lv": "A1",
+   "tip": "Soru ve olumsuzda do veya does kullanılır, fiil yalın kalır."
+  },
+  {
+   "id": "there_is",
+   "title": "There is / there are",
+   "tr": "There is ve there are: var",
+   "lv": "A1",
+   "tip": "Tekil için there is, çoğul için there are."
+  },
+  {
+   "id": "articles",
+   "title": "Articles: a, an, the",
+   "tr": "Tanımlıklar: a, an, the",
+   "lv": "A1",
+   "tip": "Sesli harfle başlayan kelimeden önce an, diğerlerinde a kullanılır."
+  },
+  {
+   "id": "can",
+   "title": "Can for ability",
+   "tr": "Can: yapabilmek",
+   "lv": "A1",
+   "tip": "Can'den sonra fiil yalın gelir, -s veya to almaz."
+  },
+  {
+   "id": "present_continuous",
+   "title": "Present continuous",
+   "tr": "Şimdiki zaman",
+   "lv": "A1",
+   "tip": "Am, is, are ile fiil -ing alır: I am driving."
+  },
+  {
+   "id": "past_be",
+   "title": "Past of 'to be' (was, were)",
+   "tr": "Was ve were",
+   "lv": "A2",
+   "tip": "I, he, she, it ile was; we, you, they ile were."
+  },
+  {
+   "id": "past_simple",
+   "title": "Past simple",
+   "tr": "Geçmiş zaman",
+   "lv": "A2",
+   "tip": "Düzenli fiiller -ed alır, düzensizlerin kendi hali vardır: go, went."
+  },
+  {
+   "id": "going_to",
+   "title": "Going to for plans",
+   "tr": "Going to ile planlar",
+   "lv": "A2",
+   "tip": "Planlar için am, is, are going to ve yalın fiil."
+  },
+  {
+   "id": "comparatives",
+   "title": "Comparatives",
+   "tr": "Karşılaştırma: -er ve more",
+   "lv": "A2",
+   "tip": "Kısa sıfatlar -er, uzun sıfatlar more alır; than ile karşılaştırılır."
+  },
+  {
+   "id": "superlatives",
+   "title": "Superlatives",
+   "tr": "En üstünlük: the -est, the most",
+   "lv": "A2",
+   "tip": "The ile birlikte -est ya da most kullanılır."
+  },
+  {
+   "id": "countable",
+   "title": "Much, many, some, any",
+   "tr": "Much, many, some, any",
+   "lv": "A2",
+   "tip": "Sayılabilenle many, sayılamayanla much kullanılır."
+  },
+  {
+   "id": "present_perfect",
+   "title": "Present perfect",
+   "tr": "Present perfect: have/has ve üçüncü hal",
+   "lv": "A2",
+   "tip": "Have veya has ile fiilin üçüncü hali: I have finished."
+  },
+  {
+   "id": "will_future",
+   "title": "Will for the future",
+   "tr": "Will ile gelecek",
+   "lv": "A2",
+   "tip": "Will'den sonra fiil yalın gelir."
+  },
+  {
+   "id": "perfect_vs_past",
+   "title": "Present perfect or past simple",
+   "tr": "Present perfect mi past simple mı",
+   "lv": "B1",
+   "tip": "Belli bir geçmiş zaman varsa past simple kullanılır: yesterday, last year."
+  },
+  {
+   "id": "first_conditional",
+   "title": "First conditional",
+   "tr": "Birinci tip koşul",
+   "lv": "B1",
+   "tip": "If ile geniş zaman, ana cümlede will: If it rains, I will stay."
+  },
+  {
+   "id": "second_conditional",
+   "title": "Second conditional",
+   "tr": "İkinci tip koşul",
+   "lv": "B1",
+   "tip": "Hayali durumlar: If ile past simple, ana cümlede would."
+  },
+  {
+   "id": "passive",
+   "title": "The passive",
+   "tr": "Edilgen yapı",
+   "lv": "B1",
+   "tip": "Be fiili ve üçüncü hal: The car was repaired."
+  },
+  {
+   "id": "modals_obligation",
+   "title": "Must, have to, don't have to",
+   "tr": "Must, have to, don't have to",
+   "lv": "B1",
+   "tip": "Don't have to 'gerek yok', mustn't 'yasak' demektir."
+  },
+  {
+   "id": "relative_clauses",
+   "title": "Relative clauses",
+   "tr": "İlgi cümleleri: who, which, that",
+   "lv": "B1",
+   "tip": "İnsanlar için who, nesneler için which ya da that."
+  },
+  {
+   "id": "used_to",
+   "title": "Used to",
+   "tr": "Used to: eskiden",
+   "lv": "B1",
+   "tip": "Eskiden olan alışkanlıklar: used to ve yalın fiil."
+  },
+  {
+   "id": "gerund_infinitive",
+   "title": "Gerund or infinitive",
+   "tr": "Fiil -ing mi, to mu",
+   "lv": "B1",
+   "tip": "Enjoy, avoid, finish -ing alır; want, decide, hope to alır."
+  },
+  {
+   "id": "past_perfect",
+   "title": "Past perfect",
+   "tr": "Miş'li geçmiş: had ve üçüncü hal",
+   "lv": "B2",
+   "tip": "Geçmişteki bir olaydan daha önce olan için had ve üçüncü hal."
+  },
+  {
+   "id": "third_conditional",
+   "title": "Third conditional",
+   "tr": "Üçüncü tip koşul",
+   "lv": "B2",
+   "tip": "Geçmişle ilgili hayaller: If ile had ve üçüncü hal, ana cümlede would have."
+  },
+  {
+   "id": "reported_speech",
+   "title": "Reported speech",
+   "tr": "Dolaylı anlatım",
+   "lv": "B2",
+   "tip": "Aktarırken zaman genelde bir geri gider: is, was olur."
+  },
+  {
+   "id": "wish",
+   "title": "Wish",
+   "tr": "Wish ile dilek ve pişmanlık",
+   "lv": "B2",
+   "tip": "Şimdiki dilek için past simple: I wish I had more time."
+  },
+  {
+   "id": "inversion",
+   "title": "Inversion after negative adverbs",
+   "tr": "Devrik yapı",
+   "lv": "C1",
+   "tip": "Never, rarely, not only gibi kelimelerle başlayan cümlede soru düzeni kullanılır."
+  },
+  {
+   "id": "cleft",
+   "title": "Cleft sentences",
+   "tr": "Vurgu cümleleri: It is ... that, What ...",
+   "lv": "C1",
+   "tip": "Bir bölümü vurgulamak için It was ... that ya da What I need is ... kullanılır."
+  },
+  {
+   "id": "mixed_conditional",
+   "title": "Mixed conditionals",
+   "tr": "Karma koşul cümleleri",
+   "lv": "C1",
+   "tip": "Geçmiş koşulun şimdiki sonucu: If I had studied, I would be a doctor now."
+  }
+ ],
+ "items": [
+  {
+   "topic": "be_present",
+   "s": "I am tired after work.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "be_present",
+   "s": "She are my sister.",
+   "ok": false,
+   "fix": "She is my sister.",
+   "why": "She ile 'is' kullanılır."
+  },
+  {
+   "topic": "be_present",
+   "s": "They is at home.",
+   "ok": false,
+   "fix": "They are at home.",
+   "why": "They ile 'are' kullanılır."
+  },
+  {
+   "topic": "be_present",
+   "s": "We are late again.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "present_simple",
+   "s": "He works in a bank.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "present_simple",
+   "s": "She drive to work every day.",
+   "ok": false,
+   "fix": "She drives to work every day.",
+   "why": "He, she, it ile fiil -s alır."
+  },
+  {
+   "topic": "present_simple",
+   "s": "My parents lives in Izmir.",
+   "ok": false,
+   "fix": "My parents live in Izmir.",
+   "why": "Çoğul öznede fiil -s almaz."
+  },
+  {
+   "topic": "present_simple",
+   "s": "I drink coffee every morning.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "do_does",
+   "s": "Does she like football?",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "do_does",
+   "s": "He don't eat fish.",
+   "ok": false,
+   "fix": "He doesn't eat fish.",
+   "why": "He ile 'doesn't' kullanılır."
+  },
+  {
+   "topic": "do_does",
+   "s": "Do you speak English?",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "do_does",
+   "s": "Does he works here?",
+   "ok": false,
+   "fix": "Does he work here?",
+   "why": "Does'tan sonra fiil yalın kalır."
+  },
+  {
+   "topic": "there_is",
+   "s": "There is a cafe near my office.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "there_is",
+   "s": "There are a problem with the car.",
+   "ok": false,
+   "fix": "There is a problem with the car.",
+   "why": "Tekil isim için 'there is'."
+  },
+  {
+   "topic": "there_is",
+   "s": "There are many cars on the road.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "there_is",
+   "s": "There is two bags in the car.",
+   "ok": false,
+   "fix": "There are two bags in the car.",
+   "why": "Çoğul için 'there are'."
+  },
+  {
+   "topic": "articles",
+   "s": "I have an idea.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "articles",
+   "s": "She is a engineer.",
+   "ok": false,
+   "fix": "She is an engineer.",
+   "why": "Sesli harften önce 'an'."
+  },
+  {
+   "topic": "articles",
+   "s": "He bought a new car.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "articles",
+   "s": "I saw an dog in the park.",
+   "ok": false,
+   "fix": "I saw a dog in the park.",
+   "why": "Sessiz harften önce 'a'."
+  },
+  {
+   "topic": "can",
+   "s": "I can swim very well.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "can",
+   "s": "She can speaks three languages.",
+   "ok": false,
+   "fix": "She can speak three languages.",
+   "why": "Can'den sonra fiil yalın."
+  },
+  {
+   "topic": "can",
+   "s": "Can you help me?",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "can",
+   "s": "He cans drive.",
+   "ok": false,
+   "fix": "He can drive.",
+   "why": "Can hiçbir zaman -s almaz."
+  },
+  {
+   "topic": "present_continuous",
+   "s": "I am driving to work now.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "present_continuous",
+   "s": "She is talk on the phone.",
+   "ok": false,
+   "fix": "She is talking on the phone.",
+   "why": "Şimdiki zamanda fiil -ing alır."
+  },
+  {
+   "topic": "present_continuous",
+   "s": "They are watching a film.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "present_continuous",
+   "s": "He working right now.",
+   "ok": false,
+   "fix": "He is working right now.",
+   "why": "Is yardımcı fiili gerekir."
+  },
+  {
+   "topic": "past_be",
+   "s": "I was at home yesterday.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "past_be",
+   "s": "They was very happy.",
+   "ok": false,
+   "fix": "They were very happy.",
+   "why": "They ile 'were'."
+  },
+  {
+   "topic": "past_be",
+   "s": "She was tired last night.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "past_be",
+   "s": "We was in Ankara last week.",
+   "ok": false,
+   "fix": "We were in Ankara last week.",
+   "why": "We ile 'were'."
+  },
+  {
+   "topic": "past_simple",
+   "s": "I went to Istanbul last month.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "past_simple",
+   "s": "She buyed a new phone.",
+   "ok": false,
+   "fix": "She bought a new phone.",
+   "why": "Buy düzensizdir: bought."
+  },
+  {
+   "topic": "past_simple",
+   "s": "Did you see the match?",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "past_simple",
+   "s": "He didn't went to work.",
+   "ok": false,
+   "fix": "He didn't go to work.",
+   "why": "Didn't'ten sonra fiil yalın."
+  },
+  {
+   "topic": "going_to",
+   "s": "I am going to visit my mother.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "going_to",
+   "s": "She going to start a new job.",
+   "ok": false,
+   "fix": "She is going to start a new job.",
+   "why": "Is yardımcı fiili eksik."
+  },
+  {
+   "topic": "going_to",
+   "s": "We are going to buy a house.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "going_to",
+   "s": "They are going to moving next year.",
+   "ok": false,
+   "fix": "They are going to move next year.",
+   "why": "Going to'dan sonra fiil yalın."
+  },
+  {
+   "topic": "comparatives",
+   "s": "My car is faster than yours.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "comparatives",
+   "s": "This book is more interesting than that one.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "comparatives",
+   "s": "Istanbul is more big than Izmir.",
+   "ok": false,
+   "fix": "Istanbul is bigger than Izmir.",
+   "why": "Kısa sıfatlar -er alır."
+  },
+  {
+   "topic": "comparatives",
+   "s": "She is taller then her brother.",
+   "ok": false,
+   "fix": "She is taller than her brother.",
+   "why": "Karşılaştırmada 'than' kullanılır."
+  },
+  {
+   "topic": "superlatives",
+   "s": "This is the best day of my life.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "superlatives",
+   "s": "He is the most tall person in the office.",
+   "ok": false,
+   "fix": "He is the tallest person in the office.",
+   "why": "Kısa sıfat: the tallest."
+  },
+  {
+   "topic": "superlatives",
+   "s": "It's the most expensive hotel in town.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "superlatives",
+   "s": "She is the goodest student.",
+   "ok": false,
+   "fix": "She is the best student.",
+   "why": "Good düzensizdir: the best."
+  },
+  {
+   "topic": "countable",
+   "s": "How many people came?",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "countable",
+   "s": "I don't have much time.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "countable",
+   "s": "There isn't many milk left.",
+   "ok": false,
+   "fix": "There isn't much milk left.",
+   "why": "Milk sayılamaz: much."
+  },
+  {
+   "topic": "countable",
+   "s": "How much apples do you want?",
+   "ok": false,
+   "fix": "How many apples do you want?",
+   "why": "Apples sayılabilir: many."
+  },
+  {
+   "topic": "present_perfect",
+   "s": "I have finished my report.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "present_perfect",
+   "s": "She has went home.",
+   "ok": false,
+   "fix": "She has gone home.",
+   "why": "Go'nun üçüncü hali 'gone'."
+  },
+  {
+   "topic": "present_perfect",
+   "s": "Have you ever been to London?",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "present_perfect",
+   "s": "He have lived here for years.",
+   "ok": false,
+   "fix": "He has lived here for years.",
+   "why": "He ile 'has'."
+  },
+  {
+   "topic": "will_future",
+   "s": "I will call you tomorrow.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "will_future",
+   "s": "She will helps you.",
+   "ok": false,
+   "fix": "She will help you.",
+   "why": "Will'den sonra fiil yalın."
+  },
+  {
+   "topic": "will_future",
+   "s": "It will rain this afternoon.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "will_future",
+   "s": "I will to send the email.",
+   "ok": false,
+   "fix": "I will send the email.",
+   "why": "Will'den sonra 'to' gelmez."
+  },
+  {
+   "topic": "perfect_vs_past",
+   "s": "I saw him yesterday.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "perfect_vs_past",
+   "s": "I have seen him yesterday.",
+   "ok": false,
+   "fix": "I saw him yesterday.",
+   "why": "Yesterday ile past simple."
+  },
+  {
+   "topic": "perfect_vs_past",
+   "s": "She has worked here since 2020.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "perfect_vs_past",
+   "s": "We have met last week.",
+   "ok": false,
+   "fix": "We met last week.",
+   "why": "Last week ile past simple."
+  },
+  {
+   "topic": "first_conditional",
+   "s": "If it rains, I will stay at home.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "first_conditional",
+   "s": "If you will come, I will cook.",
+   "ok": false,
+   "fix": "If you come, I will cook.",
+   "why": "If cümlesinde will kullanılmaz."
+  },
+  {
+   "topic": "first_conditional",
+   "s": "I will call you if I need help.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "first_conditional",
+   "s": "If she study, she will pass.",
+   "ok": false,
+   "fix": "If she studies, she will pass.",
+   "why": "She ile fiil -s alır."
+  },
+  {
+   "topic": "second_conditional",
+   "s": "If I had more time, I would travel.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "second_conditional",
+   "s": "If I would be rich, I would buy a boat.",
+   "ok": false,
+   "fix": "If I were rich, I would buy a boat.",
+   "why": "If cümlesinde would kullanılmaz."
+  },
+  {
+   "topic": "second_conditional",
+   "s": "What would you do if you won the lottery?",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "second_conditional",
+   "s": "If he knew the answer, he will tell us.",
+   "ok": false,
+   "fix": "If he knew the answer, he would tell us.",
+   "why": "İkinci tipte ana cümlede 'would'."
+  },
+  {
+   "topic": "passive",
+   "s": "The car was repaired yesterday.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "passive",
+   "s": "English is spoke in many countries.",
+   "ok": false,
+   "fix": "English is spoken in many countries.",
+   "why": "Speak'in üçüncü hali 'spoken'."
+  },
+  {
+   "topic": "passive",
+   "s": "This bridge was built in 1990.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "passive",
+   "s": "The letters was sent last week.",
+   "ok": false,
+   "fix": "The letters were sent last week.",
+   "why": "Çoğul özne ile 'were'."
+  },
+  {
+   "topic": "modals_obligation",
+   "s": "You mustn't smoke here.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "modals_obligation",
+   "s": "She have to work on Saturday.",
+   "ok": false,
+   "fix": "She has to work on Saturday.",
+   "why": "She ile 'has to'."
+  },
+  {
+   "topic": "modals_obligation",
+   "s": "You don't have to come if you're busy.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "modals_obligation",
+   "s": "I must to leave now.",
+   "ok": false,
+   "fix": "I must leave now.",
+   "why": "Must'tan sonra 'to' gelmez."
+  },
+  {
+   "topic": "relative_clauses",
+   "s": "The man who lives next door is a doctor.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "relative_clauses",
+   "s": "The car which I bought is red.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "relative_clauses",
+   "s": "The woman which called you is my boss.",
+   "ok": false,
+   "fix": "The woman who called you is my boss.",
+   "why": "İnsanlar için 'who'."
+  },
+  {
+   "topic": "relative_clauses",
+   "s": "This is the book who I told you about.",
+   "ok": false,
+   "fix": "This is the book that I told you about.",
+   "why": "Nesneler için 'which' ya da 'that'."
+  },
+  {
+   "topic": "used_to",
+   "s": "I used to play football every weekend.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "used_to",
+   "s": "She used to living in Germany.",
+   "ok": false,
+   "fix": "She used to live in Germany.",
+   "why": "Used to'dan sonra fiil yalın."
+  },
+  {
+   "topic": "used_to",
+   "s": "Did you use to smoke?",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "used_to",
+   "s": "He didn't used to like coffee.",
+   "ok": false,
+   "fix": "He didn't use to like coffee.",
+   "why": "Didn't'ten sonra 'use to'."
+  },
+  {
+   "topic": "gerund_infinitive",
+   "s": "I enjoy listening to podcasts.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "gerund_infinitive",
+   "s": "She decided to change her job.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "gerund_infinitive",
+   "s": "I want learning English.",
+   "ok": false,
+   "fix": "I want to learn English.",
+   "why": "Want'tan sonra 'to' ve yalın fiil."
+  },
+  {
+   "topic": "gerund_infinitive",
+   "s": "He avoids to drive at night.",
+   "ok": false,
+   "fix": "He avoids driving at night.",
+   "why": "Avoid'den sonra -ing."
+  },
+  {
+   "topic": "past_perfect",
+   "s": "When I arrived, the meeting had started.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "past_perfect",
+   "s": "She had already leave when I called.",
+   "ok": false,
+   "fix": "She had already left when I called.",
+   "why": "Had'den sonra üçüncü hal: left."
+  },
+  {
+   "topic": "past_perfect",
+   "s": "I had never seen the sea before that trip.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "past_perfect",
+   "s": "They have finished before we arrived.",
+   "ok": false,
+   "fix": "They had finished before we arrived.",
+   "why": "Geçmişte daha önce: 'had'."
+  },
+  {
+   "topic": "third_conditional",
+   "s": "If I had left earlier, I would have caught the train.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "third_conditional",
+   "s": "If she would have known, she would have come.",
+   "ok": false,
+   "fix": "If she had known, she would have come.",
+   "why": "If cümlesinde 'had' kullanılır."
+  },
+  {
+   "topic": "third_conditional",
+   "s": "We would have won if we had played better.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "third_conditional",
+   "s": "If you had asked me, I would helped you.",
+   "ok": false,
+   "fix": "If you had asked me, I would have helped you.",
+   "why": "Ana cümlede 'would have'."
+  },
+  {
+   "topic": "reported_speech",
+   "s": "She said that she was tired.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "reported_speech",
+   "s": "He told that he was busy.",
+   "ok": false,
+   "fix": "He said that he was busy.",
+   "why": "Tell'den sonra kişi gelir: told me."
+  },
+  {
+   "topic": "reported_speech",
+   "s": "He asked me where I lived.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "reported_speech",
+   "s": "She asked me where do I work.",
+   "ok": false,
+   "fix": "She asked me where I worked.",
+   "why": "Dolaylı soruda soru yapısı kullanılmaz."
+  },
+  {
+   "topic": "wish",
+   "s": "I wish I had more free time.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "wish",
+   "s": "I wish I can speak French.",
+   "ok": false,
+   "fix": "I wish I could speak French.",
+   "why": "Wish'ten sonra 'could'."
+  },
+  {
+   "topic": "wish",
+   "s": "She wishes she hadn't said that.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "wish",
+   "s": "I wish I didn't eat so much last night.",
+   "ok": false,
+   "fix": "I wish I hadn't eaten so much last night.",
+   "why": "Geçmiş pişmanlık için 'hadn't' ve üçüncü hal."
+  },
+  {
+   "topic": "inversion",
+   "s": "Never have I seen such a beautiful view.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "inversion",
+   "s": "Rarely I go to the cinema these days.",
+   "ok": false,
+   "fix": "Rarely do I go to the cinema these days.",
+   "why": "Rarely ile başlayınca 'do I'."
+  },
+  {
+   "topic": "inversion",
+   "s": "Not only did he arrive late, but he also forgot the documents.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "inversion",
+   "s": "Hardly I had sat down when the phone rang.",
+   "ok": false,
+   "fix": "Hardly had I sat down when the phone rang.",
+   "why": "Hardly ile başlayınca 'had I'."
+  },
+  {
+   "topic": "cleft",
+   "s": "It was John who called you.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "cleft",
+   "s": "What I need is a long holiday.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "cleft",
+   "s": "What I want it is some peace.",
+   "ok": false,
+   "fix": "What I want is some peace.",
+   "why": "Fazladan 'it' kullanılmaz."
+  },
+  {
+   "topic": "cleft",
+   "s": "It was in 2010 when I met her.",
+   "ok": false,
+   "fix": "It was in 2010 that I met her.",
+   "why": "Zaman vurgusunda 'that' daha doğal."
+  },
+  {
+   "topic": "mixed_conditional",
+   "s": "If I had taken that job, I would be living in London now.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "mixed_conditional",
+   "s": "If she had listened to me, she wouldn't have be in trouble now.",
+   "ok": false,
+   "fix": "If she had listened to me, she wouldn't be in trouble now.",
+   "why": "Şimdiki sonuç için 'wouldn't be'."
+  },
+  {
+   "topic": "mixed_conditional",
+   "s": "If I were more organised, I would have finished yesterday.",
+   "ok": true,
+   "fix": "",
+   "why": ""
+  },
+  {
+   "topic": "mixed_conditional",
+   "s": "If he hadn't missed the flight, he will be here now.",
+   "ok": false,
+   "fix": "If he hadn't missed the flight, he would be here now.",
+   "why": "Ana cümlede 'would'."
+  }
+ ]
+}
