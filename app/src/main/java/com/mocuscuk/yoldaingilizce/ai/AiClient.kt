@@ -69,7 +69,7 @@ class AiClient(private val context: Context) {
                 .call(payload)
                 .await()
         }
-        val data = result.data as? Map<*, *> ?: error("Unexpected response")
+        val data = result.getData() as? Map<*, *> ?: error("Unexpected response")
         return data["json"] as? String ?: error("Response has no json field")
     }
 
