@@ -18,6 +18,7 @@ class ContentRepository(private val context: Context) {
     private val aiGrammarFile = File(context.filesDir, "ai_grammar.json")
 
     private val seedWords: List<Word> by lazy { readAsset("words.json") }
+    private val topicWords: List<Word> by lazy { readAsset("topic_words.json") }
     private val seedGrammar: GrammarFile by lazy { readAsset("grammar.json") }
 
     @Volatile private var aiWords: List<Word> = readFile(aiWordsFile) ?: emptyList()
@@ -25,9 +26,9 @@ class ContentRepository(private val context: Context) {
 
     val topics: List<GrammarTopic> get() = seedGrammar.topics
 
-    /** All words, easiest level first, without duplicates. */
+    /** All words, easiest level first, without duplicates. Themed words win over plain ones. */
     fun allWords(): List<Word> =
-        (seedWords + aiWords)
+        (topicWords + aiWords.filter { it.tp.isNotEmpty() } + seedWords + aiWords.filter { it.tp.isEmpty() })
             .distinctBy { it.w.lowercase() }
             .sortedBy { levelIndex(it.lv) }
 
@@ -41,12 +42,12 @@ class ContentRepository(private val context: Context) {
         return seedGrammar.items.filter { it.topic in ids }
     }
 
-    /** Asks the AI for new words at this level. Returns how many were added. */
-    suspend fun expandWords(ai: AiClient, level: String, count: Int = 30): Int {
+    /** Asks the AI for new words at this level (and theme). Returns how many were added. */
+    suspend fun expandWords(ai: AiClient, level: String, count: Int = 30, topic: WordTopic? = null): Int {
         val known = allWords().map { it.w }
-        val fresh = ai.words(level, count, known)
+        val fresh = ai.words(level, count, known, topic)
             .filter { it.w.isNotBlank() && it.tr.isNotBlank() }
-            .map { it.copy(lv = level) }
+            .map { it.copy(lv = level, tp = topic?.id.orEmpty()) }
         val existing = known.map { it.lowercase() }.toSet()
         val added = fresh.filter { it.w.lowercase() !in existing }
         if (added.isNotEmpty()) {

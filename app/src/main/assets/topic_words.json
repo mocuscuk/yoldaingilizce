@@ -1,0 +1,639 @@
+[
+ {
+  "w": "meeting",
+  "tr": "toplantı",
+  "ex": "The meeting starts at nine.",
+  "lv": "A2",
+  "tp": "business"
+ },
+ {
+  "w": "colleague",
+  "tr": "iş arkadaşı",
+  "ex": "My colleague helped me with the report.",
+  "lv": "A2",
+  "tp": "business"
+ },
+ {
+  "w": "boss",
+  "tr": "patron",
+  "ex": "My boss is on holiday this week.",
+  "lv": "A1",
+  "tp": "business"
+ },
+ {
+  "w": "salary",
+  "tr": "maaş",
+  "ex": "They offered me a better salary.",
+  "lv": "A2",
+  "tp": "business"
+ },
+ {
+  "w": "deadline",
+  "tr": "son teslim tarihi",
+  "ex": "The deadline for the project is Friday.",
+  "lv": "B1",
+  "tp": "business"
+ },
+ {
+  "w": "report",
+  "tr": "rapor",
+  "ex": "I need to finish this report today.",
+  "lv": "A2",
+  "tp": "business"
+ },
+ {
+  "w": "customer",
+  "tr": "müşteri",
+  "ex": "The customer called twice this morning.",
+  "lv": "A2",
+  "tp": "business"
+ },
+ {
+  "w": "schedule",
+  "tr": "program, takvim",
+  "ex": "Let me check my schedule.",
+  "lv": "B1",
+  "tp": "business"
+ },
+ {
+  "w": "office",
+  "tr": "ofis",
+  "ex": "I get to the office at eight.",
+  "lv": "A1",
+  "tp": "business"
+ },
+ {
+  "w": "manager",
+  "tr": "müdür",
+  "ex": "The manager wants to see the numbers.",
+  "lv": "A2",
+  "tp": "business"
+ },
+ {
+  "w": "company",
+  "tr": "şirket",
+  "ex": "She works for a big company.",
+  "lv": "A1",
+  "tp": "business"
+ },
+ {
+  "w": "contract",
+  "tr": "sözleşme",
+  "ex": "We signed the contract yesterday.",
+  "lv": "B1",
+  "tp": "business"
+ },
+ {
+  "w": "budget",
+  "tr": "bütçe",
+  "ex": "We have a small budget this year.",
+  "lv": "B1",
+  "tp": "business"
+ },
+ {
+  "w": "invoice",
+  "tr": "fatura",
+  "ex": "Please send me the invoice by email.",
+  "lv": "B1",
+  "tp": "business"
+ },
+ {
+  "w": "hire",
+  "tr": "işe almak",
+  "ex": "We want to hire two new engineers.",
+  "lv": "B1",
+  "tp": "business"
+ },
+ {
+  "w": "resign",
+  "tr": "istifa etmek",
+  "ex": "He decided to resign last month.",
+  "lv": "B2",
+  "tp": "business"
+ },
+ {
+  "w": "promotion",
+  "tr": "terfi",
+  "ex": "She got a promotion after two years.",
+  "lv": "B1",
+  "tp": "business"
+ },
+ {
+  "w": "agenda",
+  "tr": "gündem",
+  "ex": "What is on the agenda today?",
+  "lv": "B1",
+  "tp": "business"
+ },
+ {
+  "w": "presentation",
+  "tr": "sunum",
+  "ex": "I have a presentation this afternoon.",
+  "lv": "A2",
+  "tp": "business"
+ },
+ {
+  "w": "supplier",
+  "tr": "tedarikçi",
+  "ex": "Our supplier raised the prices.",
+  "lv": "B2",
+  "tp": "business"
+ },
+ {
+  "w": "profit",
+  "tr": "kâr",
+  "ex": "The company made a good profit this year.",
+  "lv": "B1",
+  "tp": "business"
+ },
+ {
+  "w": "sales",
+  "tr": "satışlar",
+  "ex": "Sales went up in the summer.",
+  "lv": "A2",
+  "tp": "business"
+ },
+ {
+  "w": "follow up",
+  "tr": "takip etmek",
+  "ex": "I will follow up with an email.",
+  "lv": "B1",
+  "tp": "business"
+ },
+ {
+  "w": "postpone",
+  "tr": "ertelemek",
+  "ex": "Can we postpone the call until Monday?",
+  "lv": "B2",
+  "tp": "business"
+ },
+ {
+  "w": "attach",
+  "tr": "eklemek",
+  "ex": "I attached the file to my email.",
+  "lv": "B1",
+  "tp": "business"
+ },
+ {
+  "w": "team",
+  "tr": "ekip",
+  "ex": "Our team is very busy this month.",
+  "lv": "A1",
+  "tp": "business"
+ },
+ {
+  "w": "task",
+  "tr": "görev",
+  "ex": "This task will take two hours.",
+  "lv": "A2",
+  "tp": "business"
+ },
+ {
+  "w": "goal",
+  "tr": "hedef",
+  "ex": "Our goal is to finish by June.",
+  "lv": "A2",
+  "tp": "business"
+ },
+ {
+  "w": "feedback",
+  "tr": "geri bildirim",
+  "ex": "Thanks for your feedback on my work.",
+  "lv": "B1",
+  "tp": "business"
+ },
+ {
+  "w": "shift",
+  "tr": "vardiya",
+  "ex": "I work the night shift on Fridays.",
+  "lv": "B1",
+  "tp": "business"
+ },
+ {
+  "w": "reach an agreement",
+  "tr": "anlaşmaya varmak",
+  "ex": "We finally reached an agreement.",
+  "lv": "B2",
+  "tp": "business"
+ },
+ {
+  "w": "stakeholder",
+  "tr": "paydaş",
+  "ex": "We need to inform all stakeholders.",
+  "lv": "C1",
+  "tp": "business"
+ },
+ {
+  "w": "ticket",
+  "tr": "bilet",
+  "ex": "I bought a train ticket online.",
+  "lv": "A1",
+  "tp": "travel"
+ },
+ {
+  "w": "passport",
+  "tr": "pasaport",
+  "ex": "Don't forget your passport.",
+  "lv": "A1",
+  "tp": "travel"
+ },
+ {
+  "w": "luggage",
+  "tr": "bagaj",
+  "ex": "My luggage is too heavy.",
+  "lv": "A2",
+  "tp": "travel"
+ },
+ {
+  "w": "flight",
+  "tr": "uçuş",
+  "ex": "Our flight leaves at six.",
+  "lv": "A2",
+  "tp": "travel"
+ },
+ {
+  "w": "delay",
+  "tr": "rötar, gecikme",
+  "ex": "There is a two hour delay.",
+  "lv": "A2",
+  "tp": "travel"
+ },
+ {
+  "w": "boarding pass",
+  "tr": "biniş kartı",
+  "ex": "Show your boarding pass at the gate.",
+  "lv": "A2",
+  "tp": "travel"
+ },
+ {
+  "w": "gate",
+  "tr": "kapı",
+  "ex": "The plane leaves from gate twelve.",
+  "lv": "A2",
+  "tp": "travel"
+ },
+ {
+  "w": "check in",
+  "tr": "giriş yapmak",
+  "ex": "We can check in after two o'clock.",
+  "lv": "A2",
+  "tp": "travel"
+ },
+ {
+  "w": "reservation",
+  "tr": "rezervasyon",
+  "ex": "I have a reservation for two nights.",
+  "lv": "A2",
+  "tp": "travel"
+ },
+ {
+  "w": "room",
+  "tr": "oda",
+  "ex": "Can I have a quiet room?",
+  "lv": "A1",
+  "tp": "travel"
+ },
+ {
+  "w": "receipt",
+  "tr": "fiş, makbuz",
+  "ex": "Can I have the receipt, please?",
+  "lv": "A2",
+  "tp": "travel"
+ },
+ {
+  "w": "station",
+  "tr": "istasyon",
+  "ex": "The station is near the hotel.",
+  "lv": "A1",
+  "tp": "travel"
+ },
+ {
+  "w": "platform",
+  "tr": "peron",
+  "ex": "The train leaves from platform three.",
+  "lv": "A2",
+  "tp": "travel"
+ },
+ {
+  "w": "map",
+  "tr": "harita",
+  "ex": "Do you have a map of the city?",
+  "lv": "A1",
+  "tp": "travel"
+ },
+ {
+  "w": "direction",
+  "tr": "yön",
+  "ex": "Which direction is the museum?",
+  "lv": "A2",
+  "tp": "travel"
+ },
+ {
+  "w": "abroad",
+  "tr": "yurt dışı",
+  "ex": "I want to travel abroad next year.",
+  "lv": "B1",
+  "tp": "travel"
+ },
+ {
+  "w": "sightseeing",
+  "tr": "gezip görme",
+  "ex": "We went sightseeing in the old town.",
+  "lv": "B1",
+  "tp": "travel"
+ },
+ {
+  "w": "souvenir",
+  "tr": "hediyelik eşya",
+  "ex": "I bought a souvenir for my mother.",
+  "lv": "B1",
+  "tp": "travel"
+ },
+ {
+  "w": "currency",
+  "tr": "para birimi",
+  "ex": "What is the local currency?",
+  "lv": "B1",
+  "tp": "travel"
+ },
+ {
+  "w": "exchange",
+  "tr": "değiştirmek",
+  "ex": "Where can I exchange money?",
+  "lv": "A2",
+  "tp": "travel"
+ },
+ {
+  "w": "rent a car",
+  "tr": "araba kiralamak",
+  "ex": "We will rent a car at the airport.",
+  "lv": "A2",
+  "tp": "travel"
+ },
+ {
+  "w": "round trip",
+  "tr": "gidiş dönüş",
+  "ex": "A round trip ticket is cheaper.",
+  "lv": "B1",
+  "tp": "travel"
+ },
+ {
+  "w": "one way",
+  "tr": "tek yön",
+  "ex": "I need a one way ticket to Izmir.",
+  "lv": "A2",
+  "tp": "travel"
+ },
+ {
+  "w": "customs",
+  "tr": "gümrük",
+  "ex": "We waited at customs for an hour.",
+  "lv": "B1",
+  "tp": "travel"
+ },
+ {
+  "w": "destination",
+  "tr": "varış yeri",
+  "ex": "Our final destination is Rome.",
+  "lv": "B1",
+  "tp": "travel"
+ },
+ {
+  "w": "crowded",
+  "tr": "kalabalık",
+  "ex": "The beach was very crowded.",
+  "lv": "A2",
+  "tp": "travel"
+ },
+ {
+  "w": "book",
+  "tr": "rezervasyon yapmak",
+  "ex": "I booked a table for tonight.",
+  "lv": "A2",
+  "tp": "travel"
+ },
+ {
+  "w": "cancel",
+  "tr": "iptal etmek",
+  "ex": "They cancelled our flight.",
+  "lv": "A2",
+  "tp": "travel"
+ },
+ {
+  "w": "lost",
+  "tr": "kayıp",
+  "ex": "I am lost. Can you help me?",
+  "lv": "A2",
+  "tp": "travel"
+ },
+ {
+  "w": "itinerary",
+  "tr": "seyahat planı",
+  "ex": "Here is our itinerary for the week.",
+  "lv": "B2",
+  "tp": "travel"
+ },
+ {
+  "w": "how are you",
+  "tr": "nasılsın",
+  "ex": "Hi Tom, how are you today?",
+  "lv": "A1",
+  "tp": "daily"
+ },
+ {
+  "w": "nice to meet you",
+  "tr": "tanıştığıma memnun oldum",
+  "ex": "Nice to meet you, I am Alex.",
+  "lv": "A1",
+  "tp": "daily"
+ },
+ {
+  "w": "see you later",
+  "tr": "sonra görüşürüz",
+  "ex": "See you later at the cafe.",
+  "lv": "A1",
+  "tp": "daily"
+ },
+ {
+  "w": "by the way",
+  "tr": "bu arada",
+  "ex": "By the way, I saw your brother.",
+  "lv": "A2",
+  "tp": "daily"
+ },
+ {
+  "w": "neighbour",
+  "tr": "komşu",
+  "ex": "Our neighbour has a big dog.",
+  "lv": "A2",
+  "tp": "daily"
+ },
+ {
+  "w": "grocery store",
+  "tr": "market",
+  "ex": "I stop at the grocery store on my way home.",
+  "lv": "A2",
+  "tp": "daily"
+ },
+ {
+  "w": "bill",
+  "tr": "hesap, fatura",
+  "ex": "Can we have the bill, please?",
+  "lv": "A2",
+  "tp": "daily"
+ },
+ {
+  "w": "change",
+  "tr": "para üstü",
+  "ex": "Keep the change.",
+  "lv": "A2",
+  "tp": "daily"
+ },
+ {
+  "w": "hungry",
+  "tr": "aç",
+  "ex": "I am hungry, let's eat something.",
+  "lv": "A1",
+  "tp": "daily"
+ },
+ {
+  "w": "tired",
+  "tr": "yorgun",
+  "ex": "I am tired after work.",
+  "lv": "A1",
+  "tp": "daily"
+ },
+ {
+  "w": "weekend",
+  "tr": "hafta sonu",
+  "ex": "What did you do at the weekend?",
+  "lv": "A1",
+  "tp": "daily"
+ },
+ {
+  "w": "invite",
+  "tr": "davet etmek",
+  "ex": "They invited us to dinner.",
+  "lv": "A2",
+  "tp": "daily"
+ },
+ {
+  "w": "cook",
+  "tr": "yemek yapmak",
+  "ex": "I cook dinner on Sundays.",
+  "lv": "A1",
+  "tp": "daily"
+ },
+ {
+  "w": "clean",
+  "tr": "temizlemek",
+  "ex": "I clean the house on Saturday.",
+  "lv": "A1",
+  "tp": "daily"
+ },
+ {
+  "w": "appointment",
+  "tr": "randevu",
+  "ex": "I have a doctor's appointment at five.",
+  "lv": "A2",
+  "tp": "daily"
+ },
+ {
+  "w": "in a hurry",
+  "tr": "acelesi olmak",
+  "ex": "Sorry, I am in a hurry.",
+  "lv": "B1",
+  "tp": "daily"
+ },
+ {
+  "w": "get along",
+  "tr": "iyi geçinmek",
+  "ex": "I get along well with my sister.",
+  "lv": "B1",
+  "tp": "daily"
+ },
+ {
+  "w": "catch up",
+  "tr": "hasret gidermek, sohbet etmek",
+  "ex": "Let's meet for coffee and catch up.",
+  "lv": "B1",
+  "tp": "daily"
+ },
+ {
+  "w": "hang out",
+  "tr": "takılmak, vakit geçirmek",
+  "ex": "We hang out at the park on Sundays.",
+  "lv": "B1",
+  "tp": "daily"
+ },
+ {
+  "w": "no worries",
+  "tr": "dert etme",
+  "ex": "No worries, I can wait.",
+  "lv": "A2",
+  "tp": "daily"
+ },
+ {
+  "w": "it depends",
+  "tr": "duruma bağlı",
+  "ex": "It depends on the weather.",
+  "lv": "A2",
+  "tp": "daily"
+ },
+ {
+  "w": "take care",
+  "tr": "kendine iyi bak",
+  "ex": "Take care and drive safely.",
+  "lv": "A2",
+  "tp": "daily"
+ },
+ {
+  "w": "look forward to",
+  "tr": "dört gözle beklemek",
+  "ex": "I look forward to the holiday.",
+  "lv": "B1",
+  "tp": "daily"
+ },
+ {
+  "w": "make sense",
+  "tr": "mantıklı olmak",
+  "ex": "That makes sense to me.",
+  "lv": "B1",
+  "tp": "daily"
+ },
+ {
+  "w": "figure out",
+  "tr": "çözmek, anlamak",
+  "ex": "I can't figure out this machine.",
+  "lv": "B1",
+  "tp": "daily"
+ },
+ {
+  "w": "run out of",
+  "tr": "tükenmek",
+  "ex": "We ran out of milk.",
+  "lv": "B1",
+  "tp": "daily"
+ },
+ {
+  "w": "favour",
+  "tr": "iyilik",
+  "ex": "Can you do me a favour?",
+  "lv": "B1",
+  "tp": "daily"
+ },
+ {
+  "w": "mess",
+  "tr": "dağınıklık",
+  "ex": "Sorry about the mess in the kitchen.",
+  "lv": "B1",
+  "tp": "daily"
+ },
+ {
+  "w": "chat",
+  "tr": "sohbet etmek",
+  "ex": "We chatted for an hour on the phone.",
+  "lv": "A2",
+  "tp": "daily"
+ }
+]

@@ -13,7 +13,20 @@ data class Word(
     val tr: String,
     val ex: String,
     val lv: String,
+    /** Theme id from [WORD_TOPICS], empty for general words. */
+    val tp: String = "",
 )
+
+/** A word theme the learner can pick. */
+data class WordTopic(val id: String, val tr: String, val en: String)
+
+val WORD_TOPICS = listOf(
+    WordTopic("business", "İş İngilizcesi", "work, office and business"),
+    WordTopic("travel", "Seyahat", "travel, hotels, airports and getting around"),
+    WordTopic("daily", "Günlük konuşma", "everyday conversation, shopping, home and friends"),
+)
+
+fun wordTopic(id: String): WordTopic? = WORD_TOPICS.firstOrNull { it.id == id }
 
 @Serializable
 data class GrammarTopic(
@@ -62,7 +75,32 @@ data class Progress(
     val streakDays: Int = 0,
     val lastActiveDay: Long = -1,
     val slow: Boolean = false,
+    /** Answer by voice ("biliyorum", "bilmiyorum", "tekrar") as well as buttons. */
+    val voice: Boolean = true,
+    val voiceHintDone: Boolean = false,
+    /** Word theme id, empty means mixed. */
+    val wordTopic: String = "",
+    /** The last finished trip, shown on the phone. */
+    val lastTrip: TripSummary? = null,
 ) {
     val learnedWords: Int get() = words.values.count { it.box >= 3 }
     val seenWords: Int get() = words.size
+}
+
+/** What happened during one drive. */
+@Serializable
+data class TripSummary(
+    val day: Long = 0,
+    val minutes: Int = 0,
+    val words: Int = 0,
+    val known: Int = 0,
+    val newWords: Int = 0,
+    val grammar: Int = 0,
+    val grammarRight: Int = 0,
+    val chatTurns: Int = 0,
+    val xp: Int = 0,
+    /** False when the trip ended without the spoken summary (e.g. the car was turned off). */
+    val spoken: Boolean = false,
+) {
+    val empty: Boolean get() = words == 0 && grammar == 0 && chatTurns == 0
 }

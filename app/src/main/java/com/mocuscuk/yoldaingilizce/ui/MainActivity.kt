@@ -15,10 +15,12 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
+import androidx.compose.material3.FilterChip
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Surface
@@ -41,11 +43,14 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.media3.common.MediaMetadata
 import androidx.media3.common.Player
 import androidx.media3.session.MediaController
+import androidx.media3.session.SessionCommand
 import androidx.media3.session.SessionToken
 import com.google.common.util.concurrent.ListenableFuture
 import com.google.common.util.concurrent.MoreExecutors
 import com.mocuscuk.yoldaingilizce.App
 import com.mocuscuk.yoldaingilizce.data.Progress
+import com.mocuscuk.yoldaingilizce.data.WORD_TOPICS
+import com.mocuscuk.yoldaingilizce.lesson.tripLines
 import com.mocuscuk.yoldaingilizce.lesson.Lessons
 import com.mocuscuk.yoldaingilizce.playback.Catalog
 import com.mocuscuk.yoldaingilizce.playback.LessonService
@@ -75,11 +80,12 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        if (Build.VERSION.SDK_INT >= 33 &&
-            ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED
-        ) {
-            requestPermissions(arrayOf(Manifest.permission.POST_NOTIFICATIONS), 1)
-        }
+        val wanted = buildList {
+            if (Build.VERSION.SDK_INT >= 33) add(Manifest.permission.POST_NOTIFICATIONS)
+            // For voice answers and the conversation mode.
+            if (App.instance.progress.value.voice) add(Manifest.permission.RECORD_AUDIO)
+        }.filter { ContextCompat.checkSelfPermission(this, it) != PackageManager.PERMISSION_GRANTED }
+        if (wanted.isNotEmpty()) requestPermissions(wanted.toTypedArray(), 1)
         setContent {
             MaterialTheme(colorScheme = darkColorScheme()) {
                 Surface(modifier = Modifier.fillMaxSize()) {
@@ -118,6 +124,13 @@ class MainActivity : ComponentActivity() {
         c.prepare()
         c.play()
     }
+
+    private fun endTrip() {
+        controller?.sendCustomCommand(SessionCommand(LessonService.CMD_END, Bundle.EMPTY), Bundle.EMPTY)
+    }
+
+    private fun micAllowed(): Boolean =
+        ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED
 
     @Composable
     private fun HomeScreen() {
@@ -161,16 +174,53 @@ class MainActivity : ComponentActivity() {
                 }
             }
 
+            OutlinedButton(onClick = { endTrip() }, modifier = Modifier.fillMaxWidth()) {
+                Text("Yolculuğu bitir ve özeti dinle")
+            }
+
             Text("Başlat", style = MaterialTheme.typography.titleMedium)
-            Catalog.children.forEach { item ->
+            Catalog.lessons.forEach { item ->
                 Button(onClick = { startLesson(item.mediaId) }, modifier = Modifier.fillMaxWidth()) {
                     Text(item.mediaMetadata.title?.toString().orEmpty())
+                }
+            }
+
+            Text("Kelime konusu", style = MaterialTheme.typography.titleMedium)
+            Row(
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                modifier = Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()),
+            ) {
+                FilterChip(
+                    selected = progress.wordTopic.isEmpty(),
+                    onClick = { app.progress.update { it.copy(wordTopic = "") } },
+                    label = { Text("Karışık") },
+                )
+                WORD_TOPICS.forEach { topic ->
+                    FilterChip(
+                        selected = progress.wordTopic == topic.id,
+                        onClick = { app.progress.update { it.copy(wordTopic = topic.id) } },
+                        label = { Text(topic.tr.removeSuffix(" İngilizcesi").removeSuffix(" konuşma")) },
+                    )
                 }
             }
 
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Text("Yavaş konuş", modifier = Modifier.weight(1f))
                 Switch(checked = progress.slow, onCheckedChange = { slow -> app.progress.update { it.copy(slow = slow) } })
+            }
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Column(Modifier.weight(1f)) {
+                    Text("Sesli cevap")
+                    Text(
+                        if (micAllowed()) "Biliyorum, bilmiyorum, tekrar, bitir"
+                        else "Mikrofon izni yok. Açınca izin isteyeceğim.",
+                        fontSize = 13.sp,
+                    )
+                }
+                Switch(checked = progress.voice, onCheckedChange = { on ->
+                    app.progress.update { it.copy(voice = on) }
+                    if (on && !micAllowed()) requestPermissions(arrayOf(Manifest.permission.RECORD_AUDIO), 2)
+                })
             }
 
             Spacer(Modifier.height(8.dp))
@@ -201,6 +251,11 @@ class MainActivity : ComponentActivity() {
                 Text("Gramer basamağı: ${p.grammarTopic + 1}. ${topic?.tr ?: ""}")
                 if (p.grammarAnswered > 0) {
                     Text("Gramer doğruluk: %${p.grammarCorrect * 100 / p.grammarAnswered}")
+                }
+                p.lastTrip?.takeIf { !it.empty }?.let { trip ->
+                    Spacer(Modifier.height(4.dp))
+                    Text("Son yolculuk (${trip.minutes} dk)", fontWeight = FontWeight.SemiBold)
+                    tripLines(trip).forEach { Text(it.replace("Bu yolculukta ", ""), fontSize = 14.sp) }
                 }
             }
         }
