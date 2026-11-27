@@ -12,6 +12,21 @@ Android Auto'da bir müzik uygulaması gibi görünür. Direksiyondaki tuşlarla
 
 Navigasyon konuşunca uygulama susar, navigasyon bitince kaldığı cümleden devam eder.
 
+### Sesli cevap
+
+Tuşa basmak yerine konuşarak da cevap verebilirsin. Uygulama sadece kendisi sustuğunda dinler.
+
+| Söyle | Anlamı |
+|---|---|
+| **biliyorum**, evet, doğru | İleri ile aynı |
+| **bilmiyorum**, hayır, yanlış | Geri ile aynı |
+| **tekrar**, bir daha | Kelimeyi ya da cümleyi yeniden söyler |
+| **bitir** | Dersi bitirir, yolculuk özetini söyler |
+
+Telefonda "Sesli cevap" anahtarıyla açılıp kapanır. İlk açılışta mikrofon izni ister.
+Android, arka plandaki uygulamaların mikrofonu kullanmasını kısıtlar. Sesli cevap çalışmazsa
+dersi arabaya binince telefondaki **Oynat** tuşuyla başlat, sonra telefonu bırak.
+
 ## Neler var (ilk sürüm)
 
 - **Seviye tespiti:** Yaklaşık 10 dakikalık, uyarlamalı doğru/yanlış testi. Seni A1 ile C1 arasında bir yere koyar.
@@ -20,6 +35,9 @@ Navigasyon konuşunca uygulama susar, navigasyon bitince kaldığı cümleden de
 - **Yolculuk modu:** İlk sürüşte seviye tespiti, sonra kelime ve gramer sırayla döner.
 - **Oyunlaştırma:** XP, günlük seri, öğrenilen kelime sayısı. Telefon ekranında özet olarak görünür.
 - **Yapay zeka (Claude):** Kelime listesi ve gramer soruları bittikçe yenilerini üretir. Üretilenler telefonda saklanır, tünelde de çalışır.
+- **Serbest sohbet:** Yapay zeka İngilizce bir soru sorar, sen İngilizce cevap verirsin. Cümlende hata varsa önce doğrusunu ve kısa bir Türkçe açıklama söyler, sonra sohbete devam eder. "Stop" ya da "bitir" deyince biter. İleri tuşu konuyu değiştirir, geri tuşu son cümleyi tekrarlar. İnternet ve mikrofon gerekir.
+- **Kelime konusu:** İş İngilizcesi, Seyahat ya da Günlük konuşma. Android Auto'da **Kelime konusu** klasöründen ya da telefondan seçilir. Yeni kelimeler o konudan gelir (her konu için 30 kelime içinde gelir, bitince yapay zeka yenilerini üretir). Sohbet de o konuda olur.
+- **Yolculuk özeti:** "Bitir" deyince ya da Android Auto ekranındaki **Bitir** tuşuna basınca bu yolculukta kaç kelime çalıştığını, kaç yenisini öğrendiğini, gramer sonucunu ve kaç günlük serin olduğunu söyler. Araba özetten önce kapanırsa, bir sonraki yolculuğun başında kısaca söyler.
 
 Uygulama yapay zeka olmadan da çalışır (130 kelime ve 120 gramer sorusu içinde gelir).
 
@@ -41,7 +59,7 @@ Android Auto, Play Store dışından yüklenen medya uygulamalarını varsayıla
 4. Araba bağlıyken Android Auto'daki uygulama listesinde **Yolda İngilizce**'yi göreceksin.
    Gerekirse Android Auto ayarlarında "Başlatıcıyı özelleştir" bölümünden ekle.
 
-Sesli başlatma: "Hey Google, Yolda İngilizce'de gramer çal" ya da "kelime çal", "seviye testi çal".
+Sesli başlatma: "Hey Google, Yolda İngilizce'de gramer çal" ya da "kelime çal", "seviye testi çal", "sohbet çal", "seyahat çal", "özet çal".
 
 ### 3. Yapay zekayı bağla (Firebase, bir kere yapılır)
 
@@ -66,6 +84,8 @@ firebase deploy --only functions                    # ALLOWED_UIDS sorulunca cih
 ```
 Birden fazla telefon için kimlikleri virgülle ayır. Değer `functions/.env.yoldaingilizce` dosyasında saklanır (bu dosya repoya gitmez).
 
+Fonksiyon kodu değiştiğinde (örneğin sohbet modu eklendiğinde) son satırı yeniden çalıştırman yeterli: `firebase deploy --only functions`.
+
 Fonksiyon `europe-west1` bölgesinde çalışır ve `claude-opus-5-5` modelini düşük "effort" ile kullanır.
 Sadece `ALLOWED_UIDS` listesindeki telefonlar çağırabilir, böylece anahtarın başkası tarafından kullanılamaz.
 
@@ -84,6 +104,5 @@ functions/               Firebase Cloud Function: Claude proxy
 
 ## Sonraki adımlar
 
-- Sesli cevap (konuşarak cevap verme, yapay zeka ile değerlendirme)
-- Günlük haber (Engoo Daily News) ve serbest sohbet
+- Günlük haber (Engoo Daily News)
 - Daha doğal sesler (bulut TTS)

@@ -23,7 +23,10 @@ suspend fun LessonContext.grammarRound(questions: Int = 8) {
     tr("Gramer merdiveni. Konu: ${topic.tr}.")
     tr(topic.tip)
     if (store.value.grammarAnswered < 10) {
-        tr("Cümle doğruysa ileri, yanlışsa geri tuşuna bas.")
+        tr(
+            if (voiceOn) "Cümle doğruysa ileri tuşuna bas ya da doğru de. Yanlışsa geri tuşuna bas ya da yanlış de."
+            else "Cümle doğruysa ileri, yanlışsa geri tuşuna bas."
+        )
     }
 
     repeat(questions) {
@@ -37,6 +40,7 @@ suspend fun LessonContext.grammarRound(questions: Int = 8) {
             return@repeat
         }
         val correct = (answer == Input.NEXT) == item.ok
+        trip.grammar(correct)
         if (correct) {
             store.addXp(10)
             tr("Doğru!")
@@ -81,9 +85,13 @@ private suspend fun LessonContext.askSentence(topic: GrammarTopic, item: Grammar
     show(topic.title, item.s)
     say(item.s, Lang.EN, 0.9f, interruptible = true)
     tr("Doğru mu?", interruptible = true)
-    awaitInput(9_000)?.let { return it }
+    val again: suspend () -> Unit = {
+        say(item.s, Lang.EN, 0.8f)
+        tr("Doğru mu?")
+    }
+    awaitAnswer(9_000, again)?.let { return it }
     say(item.s, Lang.EN, 0.8f, interruptible = true)
-    return awaitInput(9_000)
+    return awaitAnswer(9_000, again)
 }
 
 /** Updates the ladder. Returns +1 / -1 when the topic changed, else null. */

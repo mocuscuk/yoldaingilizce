@@ -41,6 +41,14 @@ const GrammarBatch = z.object({
   ),
 });
 
+const ChatTurn = z.object({
+  fixed: z
+    .string()
+    .describe("The learner's last sentence rewritten as natural, correct English; empty if it was already fine"),
+  note: z.string().describe("One short Turkish sentence explaining the main correction; empty when fixed is empty"),
+  reply: z.string().describe("Your next spoken line in English: react briefly and ask one simple question"),
+});
+
 const SYSTEM =
   "You write content for a Turkish adult learning English by listening while driving. " +
   "Everything will be read aloud by text-to-speech, so avoid symbols, brackets, abbreviations " +
@@ -74,6 +82,8 @@ export const tutor = onCall(
         return { json: JSON.stringify(await words(client, data)) };
       case "grammar":
         return { json: JSON.stringify(await grammar(client, data)) };
+      case "chat":
+        return { json: JSON.stringify(await chat(client, data)) };
       default:
         throw new HttpsError("invalid-argument", "Unknown task.");
     }
@@ -99,12 +109,17 @@ async function words(client: Anthropic, data: Record<string, unknown>) {
   const exclude = Array.isArray(data.exclude)
     ? data.exclude.filter((w): w is string => typeof w === "string").slice(-1500)
     : [];
+  const topic = text(data.topic, 100);
+  const theme = topic
+    ? `that are most useful for the theme "${topic}" (words, phrasal verbs or short set phrases), most useful first. `
+    : `that belong to the 3000 most frequently used words of everyday English, most frequent first. `;
   const prompt =
-    `List ${n} English words or common phrasal verbs at CEFR level ${lv} that belong to the ` +
-    `3000 most frequently used words of everyday English, most frequent first. ` +
+    `List ${n} English words or common phrasal verbs at CEFR level ${lv} ` +
+    theme +
     `Do not include any of these words the learner already has: ${exclude.join(", ")}.\n` +
     `For each give: w (the word), tr (its most common Turkish meaning, 1 to 3 words), ` +
-    `ex (an example sentence of at most 10 words at level ${lv}, useful in daily or office life), ` +
+    `ex (an example sentence of at most 10 words at level ${lv}, ` +
+    `${topic ? `about ${topic}` : "useful in daily or office life"}), ` +
     `lv ("${lv}").`;
   return ask(client, prompt, WordBatch);
 }
@@ -122,6 +137,37 @@ async function grammar(client: Anthropic, data: Record<string, unknown>) {
     `For each give: s, ok, fix (the corrected sentence, empty if ok), ` +
     `why (one short Turkish sentence explaining the mistake, empty if ok).`;
   return ask(client, prompt, GrammarBatch);
+}
+
+async function chat(client: Anthropic, data: Record<string, unknown>) {
+  const lv = level(data.level);
+  const topic = text(data.topic, 100);
+  const history = Array.isArray(data.history)
+    ? data.history
+        .slice(-16)
+        .map((t) => (t ?? {}) as Record<string, unknown>)
+        .map((t) => ({ who: t.who === "learner" ? "Learner" : "Tutor", text: text(t.text, 400) }))
+        .filter((t) => t.text)
+    : [];
+  const transcript = history.length
+    ? history.map((t) => `${t.who}: ${t.text}`).join("\n")
+    : "(The conversation has not started yet.)";
+  const lastIsLearner = history.length > 0 && history[history.length - 1].who === "Learner";
+  const prompt =
+    `You are a friendly English conversation partner for a Turkish adult at CEFR level ${lv}. ` +
+    `The learner is driving, so everything is spoken: keep it light and easy, never ask them to look ` +
+    `at, read or write anything, and avoid stressful or emotional subjects. ` +
+    (topic ? `Prefer the theme: ${topic}. ` : `Talk about everyday life: work, commuting, family, plans, hobbies. `) +
+    `Use simple words for level ${lv} and at most two short sentences per reply, ending with one easy question.\n\n` +
+    `Conversation so far:\n${transcript}\n\n` +
+    (lastIsLearner
+      ? `The learner's last line comes from speech recognition, so ignore missing punctuation, capital letters ` +
+        `and obvious recognition mistakes. If it has a real grammar or word choice mistake, put the natural ` +
+        `correct version in "fixed" and explain the main point in one short Turkish sentence in "note". ` +
+        `If it is fine or only slightly unnatural, leave both empty. Then write your reply.`
+      : `Start the conversation: greet the learner in one short sentence and ask one easy question. ` +
+        `Leave "fixed" and "note" empty.`);
+  return ask(client, prompt, ChatTurn);
 }
 
 async function ask<T extends z.ZodType>(client: Anthropic, prompt: string, schema: T): Promise<z.infer<T>> {

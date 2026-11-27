@@ -26,6 +26,10 @@ suspend fun LessonContext.vocabRound(size: Int = 15, newWords: Int = 6) {
     if (store.value.seenWords < 20) {
         tr("Kelimeyi biliyorsan ileri, bilmiyorsan geri tuşuna bas.")
     }
+    if (voiceOn && !store.value.voiceHintDone) {
+        tr("İstersen konuşarak da cevap verebilirsin. Biliyorum, bilmiyorum ya da tekrar de.")
+        store.update { it.copy(voiceHintDone = true) }
+    }
 
     var known = 0
     var index = 0
@@ -33,7 +37,10 @@ suspend fun LessonContext.vocabRound(size: Int = 15, newWords: Int = 6) {
     while (index < queue.size) {
         val word = queue[index]
         index++
-        when (askWord(word, promptHint = index <= 3)) {
+        val isNew = word.w !in store.value.words
+        val answer = askWord(word, promptHint = index <= 3)
+        trip.word(isNew = isNew, knew = when (answer) { Input.NEXT -> true; Input.PREV -> false; else -> null })
+        when (answer) {
             Input.NEXT -> {
                 known++
                 grade(word, knew = true)
@@ -45,7 +52,7 @@ suspend fun LessonContext.vocabRound(size: Int = 15, newWords: Int = 6) {
                 // Bring it back a few words later, once.
                 if (retried.add(word.w)) queue.add(minOf(queue.size, index + 4), word)
             }
-            null -> grade(word, knew = null)
+            Input.REPEAT, null -> grade(word, knew = null)
         }
     }
     store.markActiveToday()
@@ -58,8 +65,13 @@ private suspend fun LessonContext.askWord(word: Word, promptHint: Boolean): Inpu
     say(word.w, Lang.EN, factor = 0.9f)
     gap(700)
     say(word.w, Lang.EN, factor = 0.8f, interruptible = true)
-    // Thinking time. An early press is the answer.
-    val early = awaitInput(3_500)
+    // Thinking time. An early answer counts; "tekrar" says the word once more.
+    var early = awaitInput(3_500)
+    if (early == Input.REPEAT) {
+        clearInput()
+        say(word.w, Lang.EN, factor = 0.7f)
+        early = awaitInput(3_500).takeIf { it != Input.REPEAT }
+    }
     show(word.w, word.tr)
     tr(word.tr)
     if (early == Input.NEXT) {
@@ -69,8 +81,18 @@ private suspend fun LessonContext.askWord(word: Word, promptHint: Boolean): Inpu
     gap(300)
     say(word.ex, Lang.EN, factor = 0.9f, interruptible = early == null)
     if (early != null) return early
-    tr(if (promptHint) "Biliyor muydun? Evetse ileri, hayırsa geri." else "Biliyor muydun?", interruptible = true)
-    return awaitInput(6_000)
+    val hint = when {
+        !promptHint -> "Biliyor muydun?"
+        voiceOn -> "Biliyor muydun? Biliyorum ya da bilmiyorum de."
+        else -> "Biliyor muydun? Evetse ileri, hayırsa geri."
+    }
+    tr(hint, interruptible = true)
+    return awaitAnswer(6_000) {
+        say(word.w, Lang.EN, factor = 0.8f)
+        tr(word.tr)
+        say(word.ex, Lang.EN, factor = 0.8f)
+        tr("Biliyor muydun?")
+    }
 }
 
 private fun LessonContext.grade(word: Word, knew: Boolean?) {
@@ -93,18 +115,22 @@ private fun LessonContext.grade(word: Word, knew: Boolean?) {
     }
 }
 
-/** Due reviews first, then new words from the learner's level upwards. */
+/**
+ * Due reviews first, then new words from the learner's level upwards.
+ * With a theme picked, new words come from that theme and its reviews go first.
+ */
 private fun LessonContext.buildQueue(size: Int, newWords: Int): List<Word> {
     val p = store.value
     val today = ProgressStore.today()
     val all = content.allWords()
     val byWord = all.associateBy { it.w }
+    val topic = p.wordTopic
     val due = p.words.entries
         .filter { it.value.due <= today }
         .sortedWith(compareBy({ it.value.box }, { it.value.due }))
         .mapNotNull { byWord[it.key] }
-    val start = levelIndex(p.level)
-    val fresh = all.filter { it.w !in p.words && levelIndex(it.lv) >= start }
+        .sortedBy { if (topic.isNotEmpty() && it.tp == topic) 0 else 1 }
+    val fresh = freshWords()
     val reviews = due.take(size - minOf(newWords, fresh.size))
     val news = fresh.take(size - reviews.size)
     // Mix: a new word after every two reviews.
@@ -118,12 +144,22 @@ private fun LessonContext.buildQueue(size: Int, newWords: Int): List<Word> {
     return out
 }
 
-/** How many unseen words are left from the learner's level upwards. */
-fun LessonContext.unseenWordsAhead(): Int {
+/** Unseen words to teach next, in order. */
+private fun LessonContext.freshWords(): List<Word> {
     val p = store.value
     val start = levelIndex(p.level)
-    return content.allWords().count { it.w !in p.words && levelIndex(it.lv) >= start }
+    val unseen = content.allWords().filter { it.w !in p.words }
+    if (p.wordTopic.isNotEmpty()) {
+        val themed = unseen.filter { it.tp == p.wordTopic }
+            // The learner's level and above first, easier theme words after.
+            .sortedBy { if (levelIndex(it.lv) >= start) levelIndex(it.lv) - start else 10 + start - levelIndex(it.lv) }
+        if (themed.isNotEmpty()) return themed
+    }
+    return unseen.filter { levelIndex(it.lv) >= start }
 }
+
+/** How many unseen words are left from the learner's level upwards. */
+fun LessonContext.unseenWordsAhead(): Int = freshWords().size
 
 /** The lowest level that still has fewer than [min] unseen words. */
 fun LessonContext.levelNeedingWords(min: Int = 20): String? {
@@ -133,4 +169,11 @@ fun LessonContext.levelNeedingWords(min: Int = 20): String? {
         if (content.wordsAt(level).count { it.w !in p.words } < min) return level
     }
     return null
+}
+
+/** True when the picked theme is running low on new words. */
+fun LessonContext.topicNeedsWords(min: Int = 15): Boolean {
+    val p = store.value
+    if (p.wordTopic.isEmpty()) return false
+    return content.allWords().count { it.tp == p.wordTopic && it.w !in p.words } < min
 }

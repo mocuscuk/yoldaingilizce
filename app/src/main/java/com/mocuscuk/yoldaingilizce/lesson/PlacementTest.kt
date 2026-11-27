@@ -16,6 +16,7 @@ suspend fun LessonContext.placementTest() {
     show("Seviye tespiti", "Yaklaşık 10 dakika")
     tr("Seviye tespit testi. Yaklaşık on dakika sürecek.")
     tr("Bir kelime ve anlamını, ya da bir cümle duyacaksın. Doğruysa ileri, yanlışsa geri tuşuna bas.")
+    if (voiceOn) tr("Tuşlar yerine doğru ya da yanlış da diyebilirsin. Tekrar dersen soruyu yeniden söylerim.")
     tr("Emin değilsen bir şey yapma, o soru yanlış sayılır. Başlıyoruz.")
 
     var level = 1 // start at A2
@@ -81,7 +82,10 @@ private suspend fun LessonContext.wordQuestion(level: String, used: MutableSet<S
     say(word.w, Lang.EN, 0.9f)
     gap(300)
     tr("Anlamı: $meaning. Doğru mu?", interruptible = true)
-    val answer = awaitInput(10_000) ?: return false
+    val answer = awaitAnswer(10_000) {
+        say(word.w, Lang.EN, 0.8f)
+        tr("Anlamı: $meaning. Doğru mu?")
+    } ?: return false
     return (answer == Input.NEXT) == isTrue
 }
 
@@ -92,6 +96,9 @@ private suspend fun LessonContext.sentenceQuestion(level: String, used: MutableS
     show("Doğru mu?", item.s)
     say(item.s, Lang.EN, 0.9f, interruptible = true)
     tr("Doğru mu?", interruptible = true)
-    val answer = awaitInput(10_000) ?: return false
+    val answer = awaitAnswer(10_000) {
+        say(item.s, Lang.EN, 0.8f)
+        tr("Doğru mu?")
+    } ?: return false
     return (answer == Input.NEXT) == item.ok
 }

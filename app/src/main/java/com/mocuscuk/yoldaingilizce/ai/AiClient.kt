@@ -7,6 +7,7 @@ import com.google.firebase.functions.FirebaseFunctions
 import com.mocuscuk.yoldaingilizce.data.GrammarItem
 import com.mocuscuk.yoldaingilizce.data.GrammarTopic
 import com.mocuscuk.yoldaingilizce.data.Word
+import com.mocuscuk.yoldaingilizce.data.WordTopic
 import kotlinx.coroutines.tasks.await
 import kotlinx.coroutines.withTimeout
 import kotlinx.serialization.Serializable
@@ -26,13 +27,14 @@ class AiClient(private val context: Context) {
     /** Firebase user id of this phone. It goes into ALLOWED_UIDS on the server. */
     suspend fun uid(): String? = runCatching { if (configured) signIn() else null }.getOrNull()
 
-    suspend fun words(level: String, count: Int, exclude: List<String>): List<Word> {
+    suspend fun words(level: String, count: Int, exclude: List<String>, topic: WordTopic? = null): List<Word> {
         val text = call(
             mapOf(
                 "task" to "words",
                 "level" to level,
                 "count" to count,
                 "exclude" to exclude.takeLast(1500),
+                "topic" to (topic?.en ?: ""),
             )
         )
         return json.decodeFromString<WordBatch>(text).words
@@ -53,6 +55,24 @@ class AiClient(private val context: Context) {
         }
     }
 
+    /**
+     * One turn of the free conversation. [history] holds (speaker, text) pairs,
+     * speaker "tutor" or "learner", oldest first; the last one is what the learner just said
+     * (or nothing, to start).
+     */
+    suspend fun chat(history: List<Pair<String, String>>, level: String, topic: WordTopic?): ChatReply {
+        val text = call(
+            mapOf(
+                "task" to "chat",
+                "level" to level,
+                "topic" to (topic?.en ?: ""),
+                "history" to history.takeLast(16).map { (who, said) -> mapOf("who" to who, "text" to said.take(400)) },
+            ),
+            timeoutMs = 45_000,
+        )
+        return json.decodeFromString<ChatReply>(text)
+    }
+
     private suspend fun signIn(): String {
         val auth = FirebaseAuth.getInstance()
         auth.currentUser?.let { return it.uid }
@@ -60,10 +80,10 @@ class AiClient(private val context: Context) {
         return result.user?.uid ?: error("Anonymous sign-in returned no user")
     }
 
-    private suspend fun call(payload: Map<String, Any>): String {
+    private suspend fun call(payload: Map<String, Any>, timeoutMs: Long = 90_000): String {
         check(configured) { "Firebase is not configured" }
         signIn()
-        val result = withTimeout(90_000) {
+        val result = withTimeout(timeoutMs) {
             FirebaseFunctions.getInstance(REGION)
                 .getHttpsCallable("tutor")
                 .call(payload)
@@ -72,6 +92,17 @@ class AiClient(private val context: Context) {
         val data = result.getData() as? Map<*, *> ?: error("Unexpected response")
         return data["json"] as? String ?: error("Response has no json field")
     }
+
+    /** The tutor's answer in conversation mode. */
+    @Serializable
+    data class ChatReply(
+        /** The learner's sentence said correctly, empty when it was fine. */
+        val fixed: String = "",
+        /** Short Turkish note on the correction. */
+        val note: String = "",
+        /** The tutor's next line in English. */
+        val reply: String = "",
+    )
 
     @Serializable
     private data class WordBatch(val words: List<Word>)
